@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background-attachment: fixed;
+  background: rgb(254, 255, 224);
+  background: linear-gradient(
+    160deg,
+    rgba(254, 255, 224, 1) 7%,
+    rgba(134, 253, 232, 1) 28%,
+    rgba(153, 217, 230, 1) 59%,
+    rgba(172, 182, 229, 1) 80%
+  );
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  height: 80vh;
+  padding-top: 6rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 2em;
+}
+.header .backButton {
+  background-color: #f0dd7a;
+  border: none;
+  border-radius: 20px;
+  width: 65px;
+  height: 65px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header .backButton img {
+  width: 45%;
+}
+.header .title {
+  color: #f0dd7a;
+  text-shadow: 0px 4px 6px rgba(235, 4, 255, 0.63);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.form-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+  background-color: #f0dd7a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px 15px;
+  border-radius: 12px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+.input-container input {
+  width: 300px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+.input-container .label {
+  font-weight: bold;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+.buttons-container button {
+  border-radius: 12px;
+  padding: 5px 40px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.buttons-container button:first-child {
+  background-color: #f37da0;
+}
+.buttons-container button:hover {
+  transition: ease 0.2s;
+}
+.buttons-container button:first-child:hover {
+  background-color: #e34b78;
+}
+.buttons-container button:last-child:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+/* Modal */
+.modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.474);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  translate: 0% 40%;
+  border-radius: 10px;
+}
+
+.tulisan-modal {
+  color:#f37da0;
+  width:100%;
+  font-weight: bold;
+}
+
+/* The Close Button */
+.closeGaada {
+  color: #f37da0;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeBelum {
+  color: #f37da0;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeSudah {
+  color: #f37da0;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#span-button:hover,
+#span-button:focus {
+  color: #e34b78;
+  text-decoration: none;
+  cursor: pointer;
+}

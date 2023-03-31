@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="../../../images/favicon.ico"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ETIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button class="backButton" onclick="history.back()">
+          <img src="../../../images/leftArrow.png" alt="" />
+        </button>
+        <div class="title">
+          <h1>Upgrade Ticket</h1>
+        </div>
+      </div>
+      <div class="form-container">
+        <form id="form" class="form">
+          <div class="input-container">
+            <label class="label">Id Tiket :</label>
+            <input
+              type="text"
+              id="id_ticket"
+              value=""
+              onkeypress="return onlyNumberKey(event)"
+              required
+            />
+          </div>
+          <div class="buttons-container">
+            <button  id="continueButton">Continue</button>
+            <button type="button" id="clearButton">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-background">
+      <div class="modal-gaada">
+        <div id="modalGaada" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <p class="tulisan-modal">Id Tiket Tidak Valid</p>
+            <span id="span-button" class="closeGaada">&times;</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-belum">
+        <div id="modalBelum" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <p class="tulisan-modal">Tiket Berhasil di Upgrade</p>
+            <span id="span-button" class="closeBelum">&times;</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-sudah">
+        <div id="modalSudah" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <p class="tulisan-modal">Tiket Sudah FastPass</p>
+            <span id="span-button" class="closeSudah">&times;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    require("./index.js");
+  </script>
+  <script>
+    function onlyNumberKey(evt) {
+      // Only ASCII character in that range allowed
+      var ASCIICode = evt.which ? evt.which : evt.keyCode;
+      if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
+      return true;
+    }
+  </script>
+</html>
